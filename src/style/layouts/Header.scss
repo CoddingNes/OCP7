@@ -1,0 +1,21 @@
+.bloc {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 40px 0px 100px;
+    border: solid 1px black;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.links {
+    font-family: Montserrat, arial, helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FF6060;
+    padding: 17px 0px;
+    list-style: none;
+    text-decoration: none;
+}
