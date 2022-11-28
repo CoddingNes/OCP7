@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import '../style/index.scss';
-import './index.css';
+import 'normalize.css';
+import './style/style.css';
 import Home from './Home';
 import FicheLogement from './pages/FicheLogement';
 import Apropos from './pages/Apropos';
