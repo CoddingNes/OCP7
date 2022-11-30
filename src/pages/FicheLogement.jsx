@@ -5,7 +5,7 @@ const Fiche_logement = () => {
     return (
         <div>
             <Header />
-            <h1>Fiche logement</h1>
+            {/* <Carrousel /> */}
         </div>
     );
 };

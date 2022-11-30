@@ -1,0 +1,23 @@
+.error404 {
+    color: $primary-color;
+    font-family: $fonts;
+    text-align: center;
+
+    &__title {
+        font-weight: 700;
+        font-size: 288px;
+        height: 263px;
+        margin: 169px 0 0 0;
+    }
+
+    &__subtitle {
+        font-style: medium;
+        font-size: 36px;
+        margin-top: 66px;
+    }
+
+    &__link {
+        margin-top: 182px;
+        color: $primary-color !important;
+    }
+}

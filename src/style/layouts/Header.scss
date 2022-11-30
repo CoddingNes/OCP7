@@ -2,20 +2,22 @@
 
 //header (logo + links)
 
-header {
-    .bloc {
+.header {
+    &__bloc {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 40px 100px 0px 100px;
+    }
 
-        ul {
+    &__link {
+        &-list {
             display: flex;
             flex-direction: row;
             margin: 0px 0px;
         }
 
-        .links {
+        &-element {
             font-family: $fonts;
             font-weight: 500;
             font-size: 24px;
@@ -23,6 +25,7 @@ header {
             padding: 17px 0px;
             list-style: none;
             text-decoration: none;
+            margin-left: 57px;
         }
     }
 }

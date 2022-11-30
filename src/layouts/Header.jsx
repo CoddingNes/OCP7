@@ -5,14 +5,14 @@ import logo from '../assets/logoKasa.svg';
 const Header = () => {
     return (
         <header>
-            <div className='bloc'>
-                <img className='logo' src={logo} alt="logo Kasa" />
-                <ul>
+            <div className='header__bloc'>
+                <img className='header__logo' src={logo} alt="logo Kasa" />
+                <ul className='header__link-list'>
                     <NavLink to="/">
-                        <li className='links' >Accueil</li>
+                        <li className='header__link-element' >Accueil</li>
                     </NavLink>
                     <NavLink to="/about">
-                        <li className='links' >A propos</li>
+                        <li className='header__link-element' >A propos</li>
                     </NavLink>
                 </ul>
             </div>

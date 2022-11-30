@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'normalize.css';
 import './style/style.css';
-import Home from './Home';
+import Home from './pages/Home';
 import FicheLogement from './pages/FicheLogement';
 import Apropos from './pages/Apropos';
 import Error404 from './pages/Error404';
