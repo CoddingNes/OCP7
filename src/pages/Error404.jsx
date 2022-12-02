@@ -10,7 +10,7 @@ const Error404 = () => {
             <Header />
             <main className='error404'>
                 <h1 className='error404__title'>404</h1>
-                <h2 className='error404__subtitle'>Oups! La page que vous demandez n'existe pas.</h2>
+                <h2 className='error404__subtitle'>Oups ! La page que vous demandez n'existe pas.</h2>
                 <NavLink to='/' className='error404__link'>
                     <p className='error404__link'>Retourner sur la page d’accueil</p>
                 </NavLink>

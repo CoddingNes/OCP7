@@ -4,12 +4,14 @@ import hosts from '../assets/logements.json';
 
 const ArticleLogement = () => {
     return (
-        <div className='hostCards__board'>
-            <ul className='hostCards__list'>{hosts.map((host) => (
-                <Cards key={host.id} host={host} />
-            ))}
-            </ul>
-        </div>
+        <section className='hostCards'>
+            <div className='hostCards__board'>
+                <ul className='hostCards__list'>{hosts.map((host) => (
+                    <Cards key={host.id} host={host} />
+                ))}
+                </ul>
+            </div>
+        </section>
     );
 };
 

@@ -1,0 +1,14 @@
+.tag {
+    height: 25px;
+    width: 115px;
+    border-radius: 10px;
+    background-color: $primary-color !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__name {
+        @include fonts500White;
+        font-size: 14px;
+    }
+}

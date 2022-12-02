@@ -1,7 +1,6 @@
 .error404 {
-    color: $primary-color;
-    font-family: $fonts;
     text-align: center;
+    @include fonts500Color;
 
     &__title {
         font-weight: 700;
@@ -11,13 +10,13 @@
     }
 
     &__subtitle {
-        font-style: medium;
         font-size: 36px;
         margin-top: 66px;
     }
 
     &__link {
         margin-top: 182px;
+        margin-bottom: 159px;
         color: $primary-color !important;
     }
 }

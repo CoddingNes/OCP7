@@ -36,16 +36,13 @@
 
     &__title {
         position: absolute;
-        font-family: $fonts;
-        font-weight: 500;
+        @include fonts500White;
         font-size: 18px;
-        font-style: medium;
         vertical-align: bottom;
         line-height: 26px;
         left: 20px;
         bottom: 20px;
         right: 20px;
-        color: white;
         margin: 0;
         z-index: 1;
     }

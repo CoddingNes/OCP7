@@ -13,7 +13,6 @@
         border-radius: 25px;
         opacity: 30%;
         mix-blend-mode: darken;
-        z-index: 0;
 
         &::before {
             content: "";
@@ -60,7 +59,6 @@
         border-radius: 25px;
         opacity: 30%;
         background-blend-mode: darken;
-        z-index: 1;
     }
 
     &__title {

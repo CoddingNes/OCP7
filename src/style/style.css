@@ -5,9 +5,10 @@ body {
 }
 
 .error404 {
-  color: #FF6060;
-  font-family: Montserrat, arial, helvetica, sans-serif;
   text-align: center;
+  font-family: Montserrat, arial, helvetica, sans-serif;
+  color: #FF6060;
+  font-weight: 500;
 }
 .error404__title {
   font-weight: 700;
@@ -16,12 +17,12 @@ body {
   margin: 169px 0 0 0;
 }
 .error404__subtitle {
-  font-style: medium;
   font-size: 36px;
   margin-top: 66px;
 }
 .error404__link {
   margin-top: 182px;
+  margin-bottom: 159px;
   color: #FF6060 !important;
 }
 
@@ -81,7 +82,6 @@ body {
   border-radius: 25px;
   opacity: 30%;
   mix-blend-mode: darken;
-  z-index: 0;
 }
 .homeBanner__background::before {
   content: "";
@@ -102,7 +102,6 @@ body {
   border-radius: 25px;
   opacity: 30%;
   background-blend-mode: darken;
-  z-index: 1;
 }
 .homeBanner__title {
   position: absolute;
@@ -119,7 +118,7 @@ body {
 }
 
 .hostCards__board {
-  margin: 43px 100px 0 100px;
+  margin: 43px 100px;
   background-color: #F6F6F6;
   max-width: 100%;
   border-radius: 25px;
@@ -165,17 +164,32 @@ body {
 .hostCard__title {
   position: absolute;
   font-family: Montserrat, arial, helvetica, sans-serif;
+  color: white;
   font-weight: 500;
   font-size: 18px;
-  font-style: medium;
   vertical-align: bottom;
   line-height: 26px;
   left: 20px;
   bottom: 20px;
   right: 20px;
-  color: white;
   margin: 0;
   z-index: 1;
+}
+
+.tag {
+  height: 25px;
+  width: 115px;
+  border-radius: 10px;
+  background-color: #FF6060 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tag__name {
+  font-family: Montserrat, arial, helvetica, sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
