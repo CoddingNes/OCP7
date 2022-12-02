@@ -43,8 +43,28 @@ body {
   color: #FF6060;
   padding: 17px 0px;
   list-style: none;
-  text-decoration: none;
   margin-left: 57px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 1440px;
+  height: 209px;
+  background-color: black;
+}
+.footer__image {
+  padding-top: 66px;
+}
+.footer__text {
+  font-family: Montserrat, arial, helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+  vertical-align: bottom;
+  margin-bottom: 29px;
 }
 
 .homeBanner {
@@ -55,6 +75,13 @@ body {
 }
 .homeBanner__background {
   position: relative;
+  height: 223px;
+  width: 1240px;
+  background-color: black;
+  border-radius: 25px;
+  opacity: 30%;
+  mix-blend-mode: darken;
+  z-index: 0;
 }
 .homeBanner__background::before {
   content: "";
@@ -79,8 +106,10 @@ body {
 }
 .homeBanner__title {
   position: absolute;
-  top: 50%;
-  translate: 50% -50%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   margin: auto;
   font-family: Montserrat, arial, helvetica, sans-serif;
   font-weight: 500;

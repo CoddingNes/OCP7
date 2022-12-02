@@ -7,6 +7,13 @@
 
     &__background {
         position: relative;
+        height: 223px;
+        width: 1240px;
+        background-color: black;
+        border-radius: 25px;
+        opacity: 30%;
+        mix-blend-mode: darken;
+        z-index: 0;
 
         &::before {
             content: "";
@@ -54,13 +61,14 @@
         opacity: 30%;
         background-blend-mode: darken;
         z-index: 1;
-
     }
 
     &__title {
         position: absolute;
-        top: 50%;
-        translate: 50% -50%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
         margin: auto;
         font-family: $fonts;
         font-weight: 500;

@@ -2,7 +2,9 @@ import React from 'react';
 
 const Carrousel = () => {
     return (
-        <div>
+        <div className='carrousel'>
+            <img src="" alt="" />
+
 
         </div>
     );
