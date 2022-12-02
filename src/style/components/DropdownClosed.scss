@@ -1,0 +1,23 @@
+.dropdownClosed {
+    max-width: 1023px;
+    margin: auto;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 47px;
+        background-color: $primary-color;
+        border-radius: 5px;
+    }
+
+    &__title {
+        @include fonts500White;
+        font-size: 24px;
+        padding-left: 18px;
+    }
+
+    &__image {
+        padding-right: 33px;
+    }
+}
