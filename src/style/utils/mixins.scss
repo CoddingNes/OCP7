@@ -1,3 +1,9 @@
+@mixin fonts400Color {
+    font-family: $fonts;
+    color: $primary-color;
+    font-weight: 400;
+}
+
 @mixin fonts500White {
     font-family: $fonts;
     color: white;

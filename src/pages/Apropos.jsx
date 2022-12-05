@@ -1,20 +1,19 @@
 import React from 'react';
 import Header from '../layouts/Header';
 import Footer from '../layouts/Footer';
-import DropdownClosed from '../components/DropdownClosed';
-
+import Dropdown from '../components/Dropdown';
+import AProposDetails from '../assets/aProposOpen.json'
 
 const Apropos = () => {
-    const dropdownTitles = ["Fiabilité", "Respect", "Service", "Responsabilité"]
     return (
         <div>
             <Header />
             <main>
-                {dropdownTitles.map((title, index) =>
-                    <ul>
-                        <DropdownClosed key={index} title={title} />
-                    </ul>
-                )}
+                <ul>
+                    {AProposDetails.map((theme) =>
+                        <Dropdown key={theme.index} title={theme.title} text={theme.text} />
+                    )}
+                </ul>
             </main>
             <Footer />
         </div>
