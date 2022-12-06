@@ -1,56 +1,57 @@
-.dropdown {
-    display: block;
-    max-width: 1023px;
-    margin: auto;
-    margin-top: 33px;
-
-    &.translate {
-        margin-top: 24px;
-    }
-
-
-    &__box {
-        // position: relative;
-        // top: 9px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 47px;
-        background-color: $primary-color;
-        border-radius: 5px;
+.aPropos {
+    &.dropdown {
+        display: block;
+        max-width: 1023px;
+        margin: auto;
+        margin-top: 33px;
 
         &.translate {
-            position: relative;
-            top: 9px;
+            margin-top: 24px;
         }
-    }
 
-    &__title {
-        @include fonts500White;
-        font-size: 24px;
-        padding-left: 18px;
-    }
+        .hidden {
+            display: none;
+        }
 
-    &__image {
-        padding-right: 33px;
-    }
-
-    &__details {
-        &-box {
-            max-width: 1024px;
+        &__box {
+            // position: relative;
+            // top: 9px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 47px;
+            background-color: $primary-color;
             border-radius: 5px;
-            background-color: $secondary-color;
+
+            &.translate {
+                position: relative;
+                top: 9px;
+            }
         }
 
-        &-text {
-            @include fonts400Color;
+        &__title {
+            @include fonts500White;
             font-size: 24px;
-            padding: 36px 27px 19px 18px;
-            margin: 0;
+            padding-left: 18px;
+        }
+
+        &__image {
+            padding-right: 33px;
+        }
+
+        &__details {
+            &-box {
+                max-width: 1024px;
+                border-radius: 5px;
+                background-color: $secondary-color;
+            }
+
+            &-text {
+                @include fonts400Color;
+                font-size: 24px;
+                padding: 36px 27px 19px 18px;
+                margin: 0;
+            }
         }
     }
-}
-
-.hidden {
-    display: none;
 }
