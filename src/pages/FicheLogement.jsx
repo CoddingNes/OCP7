@@ -5,7 +5,7 @@ import Footer from '../layouts/Footer';
 import Tag from '../components/Tag';
 import Dropdown from '../components/Dropdown';
 import Carousel from '../components/Carousel';
-// import Rating from '../components/Rating';
+import Rating from '../components/Rating';
 // import { useState } from 'react';
 
 
@@ -36,9 +36,7 @@ const Fiche_logement = () => {
                             <p className="details__hostName">{hostDetails.host.name}</p>
                             <img src={hostDetails.host.picture} alt="hôte" className="details__hostPic" />
                         </div>
-                        <div className="details__rating">
-                            {/* <Rating red={hostDetails.rating} /> */}
-                        </div>
+                        <Rating stars={hostDetails.rating} />
                     </div>
 
                     <div className='details__dropdown-block'>

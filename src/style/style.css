@@ -136,6 +136,10 @@ body {
   z-index: 1;
 }
 
+.carousel__block {
+  margin-top: 20px;
+}
+
 .carousel {
   position: relative;
   display: flex;
@@ -165,6 +169,15 @@ body {
   color: white;
   font-weight: 500;
   font-size: 18px;
+}
+
+.details__rating {
+  display: flex;
+  margin-top: 24px;
+  margin-right: 3px;
+}
+.details__ratingStar {
+  padding-left: 10px;
 }
 
 .footer {
