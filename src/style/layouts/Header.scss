@@ -29,28 +29,8 @@
             padding: 2px 0px;
             list-style: none;
             margin-left: 57px;
-
-            // &:active::after {
-            //     content: "";
-            //     position: absolute;
-            //     width: 100%;
-            //     top: 82%;
-            //     left: 0;
-            //     border-bottom: solid 2px $primary-color;
-            // }
-
-            // .underline &::after {
-            //     content: "";
-            //     position: absolute;
-            //     width: 100%;
-            //     top: 82%;
-            //     left: 0;
-            //     border-bottom: solid 2px $primary-color;
-            // }
         }
     }
-
-
 }
 
 .active ::after {

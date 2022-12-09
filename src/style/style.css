@@ -49,15 +49,11 @@ body {
   position: relative;
   height: 223px;
   width: 1240px;
-  background-color: black;
   border-radius: 25px;
-  opacity: 30%;
-  mix-blend-mode: darken;
 }
-.homeBanner__background::before {
+.homeBanner__background::after {
   content: "";
   position: absolute;
-  z-index: 0;
   left: 0;
   right: 0;
   top: 0;
@@ -65,26 +61,25 @@ body {
   background-color: black;
   border-radius: 25px;
   opacity: 30%;
-  mix-blend-mode: darken;
+  z-index: 0;
 }
 .homeBanner__img {
   position: relative;
   margin: auto;
   border-radius: 25px;
-  opacity: 30%;
-  background-blend-mode: darken;
 }
 .homeBanner__title {
   position: absolute;
+  width: 100%;
   left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  translate: 0 -50%;
   margin: auto;
   font-family: Montserrat, arial, helvetica, sans-serif;
+  color: white;
   font-weight: 500;
   font-size: 48px;
-  color: white;
+  text-align: center;
   z-index: 1;
 }
 
