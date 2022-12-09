@@ -11,6 +11,9 @@ body {
   align-items: center;
   margin: 40px 100px 0px 100px;
 }
+.header__bloc a {
+  text-decoration: none !important;
+}
 .header__link-list {
   display: flex;
   flex-direction: row;
@@ -24,8 +27,16 @@ body {
   color: #FF6060;
   padding: 2px 0px;
   list-style: none;
-  text-decoration: none !important;
   margin-left: 57px;
+}
+
+.active ::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 82%;
+  left: 0;
+  border-bottom: solid 2px #FF6060;
 }
 
 .homeBanner {
