@@ -1,8 +1,7 @@
-.aPropos {
+.component {
     &.dropdown {
         display: block;
         max-width: 1023px;
-        margin: auto;
         margin-top: 33px;
 
         &.translate {
@@ -14,8 +13,6 @@
         }
 
         &__box {
-            // position: relative;
-            // top: 9px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -41,6 +38,8 @@
 
         &__details {
             &-box {
+                min-height: fit-content;
+                height: calc(100% - 33px);
                 max-width: 1024px;
                 border-radius: 5px;
                 background-color: $secondary-color;

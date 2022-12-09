@@ -15,14 +15,14 @@ const Dropdown = ({ title, text }) => {
     };
 
     return (
-        <li className={hidden ? 'aPropos fiche dropdown' : 'aPropos fiche dropdown translate'} onClick={open} >
-            <div className={hidden ? 'aPropos fiche dropdown__box' : 'aPropos fiche dropdown__box translate'} >
-                <p className='aPropos fiche dropdown__title'>{title}</p>
-                <img id="img" src={ArrowDown} alt="Flèche déroulante" className={hidden ? 'aPropos fiche dropdown__image hidden' : 'aPropos fiche dropdown__image'} />
-                <img src={ArrowUpown} alt="Flèche déroulante" className={hidden ? 'aPropos fiche dropdown__image' : 'aPropos fiche dropdown__image hidden'} />
+        <li className={hidden ? 'component dropdown' : 'component dropdown translate'} onClick={open} >
+            <div className={hidden ? 'component dropdown__box' : 'component dropdown__box translate'} >
+                <p className='component dropdown__title'>{title}</p>
+                <img id="img" src={ArrowDown} alt="Flèche déroulante" className={hidden ? 'component dropdown__image hidden' : 'component dropdown__image'} />
+                <img src={ArrowUpown} alt="Flèche déroulante" className={hidden ? 'component dropdown__image' : 'component dropdown__image hidden'} />
             </div>
-            <div className={hidden ? 'aPropos fiche dropdown__details-box hidden' : 'aPropos fiche dropdown__details-box'} >
-                <p className='aPropos fiche dropdown__details-text'>{text}</p>
+            <div className={hidden ? 'component dropdown__details-box hidden' : 'component dropdown__details-box'} >
+                <p className='component dropdown__details-text'>{text}</p>
             </div>
         </li>
     );

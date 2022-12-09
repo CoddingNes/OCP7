@@ -21,30 +21,40 @@ const Fiche_logement = () => {
                 <section className='carousel__block'>
                     <Carousel pictures={hostDetails.pictures} />
                 </section>
-                <section className='details__block'>
-                    <div>
-                        <h1 className='details__title'>{hostDetails.title}</h1>
-                        <p className='details__subtitle'>{hostDetails.location}</p>
-                        <div className='details__tags-block'>
+                <section className='details'>
+                    <div className='details__lodge'>
+                        <h1 className='details__lodge-title'>{hostDetails.title}</h1>
+                        <p className='details__lodge-subtitle'>{hostDetails.location}</p>
+                        <div className='details__lodge-tags'>
                             {hostDetails.tags.map((tags, index) =>
                                 <Tag key={index} tags={tags} />
                             )}
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <p className="details__hostName">{hostDetails.host.name}</p>
-                            <img src={hostDetails.host.picture} alt="hôte" className="details__hostPic" />
+                    <div className='details__owner'>
+                        <div className='details__owner-data'>
+                            <div className="details__owner-name">
+                                <p>{hostDetails.host.name.split(" ")[0]}</p>
+                                <p>{hostDetails.host.name.split(" ")[1]}</p>
+                            </div>
+                            <img
+                                src={hostDetails.host.picture}
+                                alt='hôte'
+                                className='details__owner-pic' />
                         </div>
                         <Rating stars={hostDetails.rating} />
                     </div>
-
-                    <div className='details__dropdown-block'>
-                        <Dropdown key={'description-' + hostDetails.id} title='Description' text={hostDetails.description} />
-                        <Dropdown key={'equipments-' + hostDetails.id} title='Equipement' text={hostDetails.equipments} />
-                    </div>
-
-
+                </section>
+                <section className='dropdown'>
+                    <Dropdown
+                        key={'description-' + hostDetails.id}
+                        title='Description'
+                        text={hostDetails.description} />
+                    <Dropdown
+                        key={'equipments-' + hostDetails.id}
+                        title='Equipement'
+                        text={hostDetails.equipments}
+                        className='dropdown__equipments' />
                 </section>
             </main>
             <Footer />

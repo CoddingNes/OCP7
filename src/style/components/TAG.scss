@@ -1,6 +1,7 @@
 .tag {
     height: 25px;
-    width: 115px;
+    min-width: 115px;
+    width: fit-content;
     border-radius: 10px;
     background-color: $primary-color !important;
     display: flex;
@@ -10,5 +11,6 @@
     &__name {
         @include fonts500White;
         font-size: 14px;
+        padding: 0 40px;
     }
 }
