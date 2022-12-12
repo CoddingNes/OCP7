@@ -53,13 +53,19 @@ const Fiche_logement = () => {
                         <Dropdown
                             key={'description-' + hostDetails.id}
                             title='Description'
-                            text={<p className='component dropdown__details-text'>{hostDetails.description}</p>} />
+                            text={
+                                <p className='component dropdown__details-text'>{hostDetails.description}</p>
+                            } />
                         <Dropdown
                             key={'equipments-' + hostDetails.id}
                             title='Equipement'
-                            text={<ul className='component dropdown__details-text'> {hostDetails.equipments.map((item, index) => (
-                                <li key={index}>{item}</li>
-                            ))} </ul>}
+                            text={
+                                <ul className='component dropdown__details-text'>
+                                    {hostDetails.equipments.map((item, index) => (
+                                        <li key={index}>{item}</li>
+                                    ))}
+                                </ul>
+                            }
                             className='dropdown__equipments' />
                     </ul>
                 </section>

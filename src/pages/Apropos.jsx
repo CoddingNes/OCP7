@@ -6,8 +6,13 @@ const Apropos = () => {
     return (
         <main>
             <ul>
-                {AProposDetails.map((theme) =>
-                    <Dropdown key={theme.index} title={theme.title} text={<p className='component dropdown__details-text'>{theme.text}</p>} />
+                {AProposDetails.map((theme, index) =>
+                    <Dropdown
+                        key={index}
+                        title={theme.title}
+                        text={
+                            <p className='component dropdown__details-text'>{theme.text}</p>
+                        } />
                 )}
             </ul>
         </main>

@@ -6,9 +6,12 @@ const ArticleLogement = () => {
     return (
         <section className='hostCards'>
             <div className='hostCards__board'>
-                <ul className='hostCards__list'>{hosts.map((host) => (
-                    <Cards key={host.id} host={host} />
-                ))}
+                <ul className='hostCards__list'>
+                    {hosts.map((host) => (
+                        <Cards
+                            key={host.id}
+                            host={host} />
+                    ))}
                 </ul>
             </div>
         </section>

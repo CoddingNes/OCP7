@@ -8,22 +8,24 @@ const Rating = (stars) => {
     return (
         <ul className="details__rating">
             {starCount.map((starNumber, index) => starNumber <= stars.stars ?
-                <li className='details__ratingStar' >
+                <li
+                    key={index}
+                    className='details__ratingStar' >
                     <img
-                        key={'redstar-' + index}
                         src={redStar}
                         alt={'étoile de notation'}
                         className='details__ratingStar-img' />
                 </li> :
-                <li className='details__ratingStar'>
+                <li
+                    key={index}
+                    className='details__ratingStar'>
                     <img
-                        key={'greystar-' + index}
                         src={greyStar}
                         alt={'étoile de notation'}
                         className='details__ratingStar-img' />
                 </li>
             )}
-        </ul>
+        </ul >
     );
 };
 
