@@ -1,8 +1,21 @@
 .details__rating {
     display: flex;
-    margin: 24px 3px 0px 0px;
+    align-items: center;
+    margin: 0;
 
-    &Star {
-        padding-left: 10px;
+    @media screen and (min-width: 768px) {
+        margin: 24px 3px 0px 0px;
+    }
+
+    &Star-img {
+        margin-left: 5px;
+
+        @media screen and (max-width: 767px) {
+            height: 15px;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-left: 10px;
+        }
     }
 }

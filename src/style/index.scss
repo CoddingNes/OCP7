@@ -3,7 +3,7 @@
 @import "./utils/mixins.scss";
 @import "./pages/home.scss";
 @import "./layouts/header.scss";
-@import "./components/homeBanner.scss";
+@import "./components/banner.scss";
 @import "./components/articlesLogement.scss";
 @import "./components/cards.scss";
 @import "./pages/FicheLogement.scss";
@@ -17,4 +17,8 @@
 
 * {
     list-style: none;
+}
+
+body {
+    width: 100%;
 }

@@ -45,7 +45,7 @@ const Carousel = (pictures) => {
                     className="carousel__rightArrow"
                     onClick={moveRight} />
             </div>
-            <p className="carousel__counter">{i + "/" + (pictures.pictures.length - 1)}</p>
+            <p className="carousel__counter">{(i + 1) + "/" + (pictures.pictures.length)}</p>
         </div>
     );
 };

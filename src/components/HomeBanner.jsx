@@ -1,15 +1,15 @@
 import React from 'react';
-import banner from '../assets/banner.svg';
 
-const Banner = () => {
+const Banner = (props) => {
+
     return (
-        <section className='homeBanner'>
-            <div className='homeBanner__background'>
+        <section className={props.specificClass + 'banner'}>
+            <div className={props.specificClass + 'banner__background'}>
                 <img
-                    src={banner}
+                    src={props.src}
                     alt="paysage d'illustration"
-                    className='homeBanner__img' />
-                <h1 className='homeBanner__title'>Chez vous, partout et ailleurs</h1>
+                    className={props.specificClass + 'banner__img'} />
+                <h1 className={props.specificClass + 'banner__title'}>Chez vous,<span></span>partout et ailleurs</h1>
             </div>
         </section>
     );

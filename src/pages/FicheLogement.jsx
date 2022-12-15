@@ -49,13 +49,14 @@ const Fiche_logement = () => {
                     </div>
                 </section>
                 <section className='dropdown'>
-                    <ul className='dropdown'>
+                    <ul className='fiche dropdown__list'>
                         <Dropdown
                             key={'description-' + hostDetails.id}
                             title='Description'
                             text={
                                 <p className='component dropdown__details-text'>{hostDetails.description}</p>
-                            } />
+                            }
+                            className=' fiche' />
                         <Dropdown
                             key={'equipments-' + hostDetails.id}
                             title='Equipement'
@@ -66,7 +67,7 @@ const Fiche_logement = () => {
                                     ))}
                                 </ul>
                             }
-                            className='dropdown__equipments' />
+                            className=' fiche' />
                     </ul>
                 </section>
             </main>

@@ -1,39 +1,75 @@
 .carousel__block {
+    // display: flex;
+    // justify-content: center;
     margin-top: 20px;
 }
 
 .details {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1240px;
-    margin: auto;
-    margin-top: 30px;
+    margin: 0 20px;
+    margin-top: 10px;
     @include fonts500Color;
+
+    @media screen and (min-width: 768px) {
+        margin: 24px 100px 0 100px;
+        flex-wrap: nowrap;
+    }
 
     &__lodge {
         &-title {
             font-weight: inherit;
-            font-size: 36px;
-            margin: 5px 0px;
+            font-size: 18px;
+            margin: 0px 0px;
+            line-height: 30px;
+
+            @media screen and (min-width: 768px) {
+                font-weight: inherit;
+                font-size: 36px;
+                margin: 10px 0px;
+            }
         }
 
         &-subtitle {
-            font-size: 18px;
+            font-size: 14px;
             margin: 0;
+            margin-top: 10px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 18px;
+                line-height: 30px;
+            }
         }
 
         &-tags {
             display: flex;
-            margin-top: 23px;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+
+            @media screen and (min-width: 768px) {
+                margin-top: 23px;
+                flex-wrap: nowrap;
+            }
         }
     }
 
     &__owner {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
-        ;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 16px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: start;
+            margin-top: 0px;
+        }
+
 
         &-data {
             display: flex;
@@ -44,9 +80,13 @@
 
         &-name {
             width: fit-content;
-            font-size: 18px;
+            font-size: 12px;
             margin-right: 10px;
             text-align: end;
+
+            @media screen and (min-width: 768px) {
+                font-size: 18px;
+            }
 
             p {
                 margin: 0;
@@ -56,9 +96,14 @@
 
         &-pic {
             display: inline-block;
-            height: 64px;
-            width: 64px;
+            height: 32px;
+            width: 32px;
             border-radius: 50%;
+
+            @media screen and (min-width: 768px) {
+                height: 64px;
+                width: 64px;
+            }
         }
     }
 }
@@ -67,9 +112,31 @@
     display: flex;
     justify-content: space-between;
     gap: 60px;
-    width: 1240px;
-    margin: auto;
-    margin-top: 0;
-    margin-bottom: 14px;
+    // margin: auto;
 
+    @media screen and (min-width: 768px) {
+        // flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        margin-top: 4px;
+
+        @media screen and (min-width: 768px) {
+            margin: 0px 62px;
+        }
+
+        &.fiche {
+
+            @media screen and (min-width: 768px) {
+                width: 100%;
+                display: flex;
+                width: 100%;
+            }
+        }
+
+        &-elements {
+            width: 50%;
+        }
+    }
 }

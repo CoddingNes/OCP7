@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ArrowDown from '../assets/dropdownDownArrow.svg'
 import ArrowUpown from '../assets/dropdownUpArrow.svg'
 
-const Dropdown = ({ title, text }) => {
+const Dropdown = ({ title, text, className }) => {
     const [hidden, setHidden] = useState(false);
     const open = () => {
         if (hidden) {
@@ -16,7 +16,7 @@ const Dropdown = ({ title, text }) => {
 
     return (
         <li
-            className={hidden ? 'component dropdown' : 'component dropdown translate'}
+            className={(hidden ? 'component dropdown' : 'component dropdown translate') + className}
             onClick={open} >
             <div className={hidden ? 'component dropdown__box' : 'component dropdown__box translate'} >
                 <p className='component dropdown__title'>{title}</p>
@@ -32,7 +32,7 @@ const Dropdown = ({ title, text }) => {
             <div className={hidden ? 'component dropdown__details-box hidden' : 'component dropdown__details-box'} >
                 {text}
             </div>
-        </li>
+        </li >
     );
 };
 
