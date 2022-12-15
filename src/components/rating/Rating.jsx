@@ -7,20 +7,12 @@ const Rating = (stars) => {
 
     return (
         <ul className="details__rating">
-            {starCount.map((starNumber, index) => starNumber <= stars.stars ?
+            {starCount.map((starNumber, index) =>
                 <li
                     key={index}
                     className='details__ratingStar' >
                     <img
-                        src={redStar}
-                        alt={'étoile de notation'}
-                        className='details__ratingStar-img' />
-                </li> :
-                <li
-                    key={index}
-                    className='details__ratingStar'>
-                    <img
-                        src={greyStar}
+                        src={starNumber <= stars.stars ? redStar : greyStar}
                         alt={'étoile de notation'}
                         className='details__ratingStar-img' />
                 </li>
