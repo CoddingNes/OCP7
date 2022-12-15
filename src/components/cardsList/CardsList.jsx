@@ -1,6 +1,6 @@
 import React from 'react';
-import Cards from './Cards';
-import hosts from '../assets/logements.json';
+import Cards from '../cards/Cards';
+import hosts from '../../assets/logements.json';
 
 const ArticleLogement = () => {
     return (

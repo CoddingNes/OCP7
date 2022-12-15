@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import leftArrow from '../assets/CarouselLeftArrow.svg';
-import rightArrow from '../assets/CarouselRightArrow.svg';
+import leftArrow from './leftArrow.svg';
+import rightArrow from './rightArrow.svg';
 
 
 const Carousel = (pictures) => {

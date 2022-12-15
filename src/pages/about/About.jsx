@@ -1,12 +1,12 @@
 import React from 'react';
-import Dropdown from '../components/Dropdown';
-import Banner from '../components/HomeBanner';
-import AProposDetails from '../assets/aProposOpen.json'
-import banner from '../assets/aProposBannerDesktop.svg';
+import Collapse from '../../components/collapse/Collapse';
+import Banner from '../../components/banner/Banner';
+import aboutDetails from '../../assets/aboutDetails.json'
+import banner from '../../components/banner/aboutBannerDesktop.svg';
 
 
 
-const Apropos = () => {
+const About = () => {
     // const [isDesktop, setIsDesktop] = useState();
     // const [resized, setResized] = useState();
 
@@ -30,14 +30,14 @@ const Apropos = () => {
 
     return (
         <main>
-            <Banner specificClass="APropos__style " src={banner} />
-            <ul className='dropdown__list'>
-                {AProposDetails.map((theme, index) =>
-                    <Dropdown
+            <Banner specificClass="about__style " src={banner} />
+            <ul className='collapse__list'>
+                {aboutDetails.map((theme, index) =>
+                    <Collapse
                         key={index}
                         title={theme.title}
                         text={
-                            <p className='component dropdown__details-text'>{theme.text}</p>
+                            <p className='component collapse__details-text'>{theme.text}</p>
                         } />
                 )}
             </ul>
@@ -45,4 +45,4 @@ const Apropos = () => {
     );
 };
 
-export default Apropos;
+export default About;

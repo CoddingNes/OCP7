@@ -1,5 +1,5 @@
 import React from 'react';
-import logoFooter from '../assets/logoKasaFooter.svg';
+import logoFooter from './logoKasaFooter.svg';
 
 const Footer = () => {
     return (

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import hosts from '../assets/logements.json';
-import Tag from '../components/Tag';
-import Dropdown from '../components/Dropdown';
-import Carousel from '../components/Carousel';
-import Rating from '../components/Rating';
+import hosts from '../../assets/logements.json';
+import Tag from '../../components/tag/Tag';
+import Collapse from '../../components/collapse/Collapse';
+import Carousel from '../../components/gallery/Gallery';
+import Rating from '../../components/rating/Rating';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -48,20 +48,20 @@ const Fiche_logement = () => {
                         <Rating stars={hostDetails.rating} />
                     </div>
                 </section>
-                <section className='dropdown'>
-                    <ul className='fiche dropdown__list'>
-                        <Dropdown
+                <section className='collapse'>
+                    <ul className='fiche collapse__list'>
+                        <Collapse
                             key={'description-' + hostDetails.id}
                             title='Description'
                             text={
-                                <p className='component dropdown__details-text'>{hostDetails.description}</p>
+                                <p className='component collapse__details-text'>{hostDetails.description}</p>
                             }
                             className=' fiche' />
-                        <Dropdown
+                        <Collapse
                             key={'equipments-' + hostDetails.id}
                             title='Equipement'
                             text={
-                                <ul className='component dropdown__details-text'>
+                                <ul className='component collapse__details-text'>
                                     {hostDetails.equipments.map((item, index) => (
                                         <li key={index}>{item}</li>
                                     ))}
