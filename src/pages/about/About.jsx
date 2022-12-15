@@ -31,7 +31,7 @@ const About = () => {
     return (
         <main>
             <Banner specificClass="about__style " src={banner} />
-            <ul className='collapse__list'>
+            <section className='collapse__list'>
                 {aboutDetails.map((theme, index) =>
                     <Collapse
                         key={index}
@@ -40,7 +40,7 @@ const About = () => {
                             <p className='component collapse__details-text'>{theme.text}</p>
                         } />
                 )}
-            </ul>
+            </section>
         </main>
     );
 };

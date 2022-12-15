@@ -49,26 +49,26 @@ const Fiche_logement = () => {
                     </div>
                 </section>
                 <section className='collapse'>
-                    <ul className='fiche collapse__list'>
-                        <Collapse
-                            key={'description-' + hostDetails.id}
-                            title='Description'
-                            text={
-                                <p className='component collapse__details-text'>{hostDetails.description}</p>
-                            }
-                            className=' fiche' />
-                        <Collapse
-                            key={'equipments-' + hostDetails.id}
-                            title='Equipement'
-                            text={
-                                <ul className='component collapse__details-text'>
-                                    {hostDetails.equipments.map((item, index) => (
-                                        <li key={index}>{item}</li>
-                                    ))}
-                                </ul>
-                            }
-                            className=' fiche' />
-                    </ul>
+                    {/* <ul className='fiche collapse__list'> */}
+                    <Collapse
+                        key={'description-' + hostDetails.id}
+                        title='Description'
+                        text={
+                            <p className='component collapse__details-text'>{hostDetails.description}</p>
+                        }
+                        className=' fiche' />
+                    <Collapse
+                        key={'equipments-' + hostDetails.id}
+                        title='Equipement'
+                        text={
+                            <ul className='component collapse__details-text'>
+                                {hostDetails.equipments.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                        }
+                        className=' fiche' />
+                    {/* </ul> */}
                 </section>
             </main>
         );

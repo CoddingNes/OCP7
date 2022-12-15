@@ -15,7 +15,7 @@ const Collapse = ({ title, text, className }) => {
     };
 
     return (
-        <li
+        <div
             className={(hidden ? 'component collapse' : 'component collapse translate') + className}
             onClick={open} >
             <div className={hidden ? 'component collapse__box' : 'component collapse__box translate'} >
@@ -33,7 +33,7 @@ const Collapse = ({ title, text, className }) => {
             <div className={hidden ? 'component collapse__details-box hidden' : 'component collapse__details-box'} >
                 {text}
             </div>
-        </li >
+        </div >
     );
 };
 
