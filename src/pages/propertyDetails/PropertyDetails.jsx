@@ -1,22 +1,43 @@
-import React, { useEffect } from 'react';
-import hosts from '../../assets/logements.json';
+import React, { useEffect, useState } from 'react';
+// import hosts from '../../assets/logements.json';
 import Tag from '../../components/tag/Tag';
 import Collapse from '../../components/collapse/Collapse';
 import Carousel from '../../components/gallery/Gallery';
 import Rating from '../../components/rating/Rating';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 
 const Fiche_logement = () => {
-    const navigate = useNavigate();
+    const [hosts, setHosts] = useState([]);
+    const getData = () => {
+        fetch('../logements.json'
+            , {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            }
+        )
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                setHosts(myJson);
+            });
+    }
+    useEffect(() => {
+        getData()
+    }, [])
+
+    // const navigate = useNavigate();
     const id = window.location.pathname.split('=')[1];
     const hostDetails = hosts.find(host => host.id === id);
-    const redirection = () => {
-        if (hostDetails === undefined) {
-            navigate("/404");
-        }
-    };
-    useEffect(redirection)
+    // const redirection = () => {
+    //     if (hostDetails === undefined) {
+    //         navigate("/404");
+    //     }
+    // };
+    // useEffect(redirection)
 
     if (hostDetails) {
         return (
