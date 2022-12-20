@@ -31,13 +31,13 @@ const About = () => {
     return (
         <main>
             <Banner specificClass="about__style " src={banner} />
-            <section className='collapse__list'>
+            <section className='collapse__about-section'>
                 {aboutDetails.map((theme, index) =>
                     <Collapse
                         key={index}
                         title={theme.title}
                         text={
-                            <p className='component collapse__details-text'>{theme.text}</p>
+                            <p className='about collapse__details-text'>{theme.text}</p>
                         } />
                 )}
             </section>

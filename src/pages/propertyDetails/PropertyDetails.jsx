@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 // import hosts from '../../assets/logements.json';
 import Tag from '../../components/tag/Tag';
 import Collapse from '../../components/collapse/Collapse';
-import Carousel from '../../components/gallery/Gallery';
+import Gallery from '../../components/gallery/Gallery';
 import Rating from '../../components/rating/Rating';
+import Lodge from '../../components/lodge/Lodge';
+import Owner from '../../components/owner/Owner';
 // import { useNavigate } from 'react-router-dom';
 
 
@@ -43,12 +45,11 @@ const Fiche_logement = () => {
         return (
             <main>
                 <section className='carousel__block'>
-                    <Carousel pictures={hostDetails.pictures} />
+                    <Gallery pictures={hostDetails.pictures} />
                 </section>
                 <section className='details'>
                     <div className='details__lodge'>
-                        <h1 className='details__lodge-title'>{hostDetails.title}</h1>
-                        <p className='details__lodge-subtitle'>{hostDetails.location}</p>
+                        <Lodge title={hostDetails.title} location={hostDetails.location} />
                         <div className='details__lodge-tags'>
                             {hostDetails.tags.map((tags, index) =>
                                 <Tag key={index} tags={tags} />
@@ -56,40 +57,29 @@ const Fiche_logement = () => {
                         </div>
                     </div>
                     <div className='details__owner'>
-                        <div className='details__owner-data'>
-                            <div className="details__owner-name">
-                                <p>{hostDetails.host.name.split(" ")[0]}</p>
-                                <p>{hostDetails.host.name.split(" ")[1]}</p>
-                            </div>
-                            <img
-                                src={hostDetails.host.picture}
-                                alt='hôte'
-                                className='details__owner-pic' />
-                        </div>
+                        <Owner name={hostDetails.host.name} picture={hostDetails.host.picture} />
                         <Rating stars={hostDetails.rating} />
                     </div>
                 </section>
-                <section className='collapse'>
-                    {/* <ul className='fiche collapse__list'> */}
+                <section className='collapse__property-section'>
                     <Collapse
                         key={'description-' + hostDetails.id}
                         title='Description'
                         text={
                             <p className='component collapse__details-text'>{hostDetails.description}</p>
                         }
-                        className=' fiche' />
+                        className=' property' />
                     <Collapse
                         key={'equipments-' + hostDetails.id}
                         title='Equipement'
                         text={
-                            <ul className='component collapse__details-text'>
+                            <ul className='property collapse__details-text'>
                                 {hostDetails.equipments.map((item, index) => (
                                     <li key={index}>{item}</li>
                                 ))}
                             </ul>
                         }
-                        className=' fiche' />
-                    {/* </ul> */}
+                        className=' property' />
                 </section>
             </main>
         );

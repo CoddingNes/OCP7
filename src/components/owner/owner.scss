@@ -1,0 +1,37 @@
+.details__owner {
+    &-data {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &-name {
+        width: 60px;
+        font-size: 12px;
+        margin-right: 10px;
+        text-align: right;
+
+        @media screen and (min-width: 768px) {
+            font-size: 18px;
+            width: 90px;
+        }
+
+        p {
+            margin: 0;
+            padding: 3px;
+        }
+    }
+
+    &-pic {
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+
+        @media screen and (min-width: 768px) {
+            height: 64px;
+            width: 64px;
+        }
+    }
+}

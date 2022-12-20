@@ -16,21 +16,21 @@ const Collapse = ({ title, text, className }) => {
 
     return (
         <div
-            className={(hidden ? 'component collapse' : 'component collapse translate') + className}
+            className={(hidden ? 'collapse' : 'collapse translate') + className}
             onClick={open} >
-            <div className={hidden ? 'component collapse__box' : 'component collapse__box translate'} >
-                <p className='component collapse__title'>{title}</p>
+            <div className={hidden ? 'collapse__box' : 'collapse__box translate'} >
+                <p className='collapse__title'>{title}</p>
                 <img
                     id="img"
                     src={arrowDown}
                     alt="Flèche déroulante"
-                    className={hidden ? 'component collapse__image hidden' : 'component collapse__image'} />
+                    className={hidden ? 'collapse__image hidden' : 'collapse__image'} />
                 <img
                     src={arrowUp}
                     alt="Flèche déroulante"
-                    className={hidden ? 'component collapse__image' : 'component collapse__image hidden'} />
+                    className={hidden ? 'collapse__image' : 'collapse__image hidden'} />
             </div>
-            <div className={hidden ? 'component collapse__details-box hidden' : 'component collapse__details-box'} >
+            <div className={hidden ? 'collapse__details-box hidden' : 'collapse__details-box'} >
                 {text}
             </div>
         </div >

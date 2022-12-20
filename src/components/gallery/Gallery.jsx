@@ -4,7 +4,7 @@ import leftArrow from './leftArrow.svg';
 import rightArrow from './rightArrow.svg';
 
 
-const Carousel = (pictures) => {
+const Gallery = (pictures) => {
     const [i, setI] = useState(0);
 
     const moveLeft = () => {
@@ -28,26 +28,26 @@ const Carousel = (pictures) => {
 
 
     return (
-        <div className='carousel'>
+        <div className='gallery'>
             <img
                 src={pictures.pictures[i]}
                 alt="Aperçu du logement"
-                className="carousel__image" />
-            <div className="carousel__arrows">
+                className="gallery__image" />
+            <div className="gallery__arrows">
                 <img
                     src={leftArrow}
                     alt="Précédent"
-                    className="carousel__leftArrow"
+                    className="gallery__leftArrow"
                     onClick={moveLeft} />
                 <img
                     src={rightArrow}
                     alt="Suivant"
-                    className="carousel__rightArrow"
+                    className="gallery__rightArrow"
                     onClick={moveRight} />
             </div>
-            <p className="carousel__counter">{(i + 1) + "/" + (pictures.pictures.length)}</p>
+            <p className="gallery__counter">{(i + 1) + "/" + (pictures.pictures.length)}</p>
         </div>
     );
 };
 
-export default Carousel;
+export default Gallery;

@@ -1,6 +1,4 @@
 .carousel__block {
-    // display: flex;
-    // justify-content: center;
     margin-top: 20px;
 }
 
@@ -8,7 +6,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1240px;
     margin: 0 20px;
     margin-top: 10px;
     @include fonts500Color;
@@ -18,41 +15,15 @@
         flex-wrap: nowrap;
     }
 
-    &__lodge {
-        &-title {
-            font-weight: inherit;
-            font-size: 18px;
-            margin: 0px 0px;
-            line-height: 30px;
+    &__lodge-tags {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
 
-            @media screen and (min-width: 768px) {
-                font-weight: inherit;
-                font-size: 36px;
-                margin: 10px 0px;
-            }
-        }
-
-        &-subtitle {
-            font-size: 14px;
-            margin: 0;
-            margin-top: 10px;
-
-            @media screen and (min-width: 768px) {
-                font-size: 18px;
-                line-height: 30px;
-            }
-        }
-
-        &-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-
-            @media screen and (min-width: 768px) {
-                margin-top: 23px;
-                flex-wrap: nowrap;
-            }
+        @media screen and (min-width: 768px) {
+            margin-top: 23px;
         }
     }
 
@@ -64,79 +35,21 @@
         margin-top: 16px;
 
         @media screen and (min-width: 768px) {
+            width: 200px;
             flex-direction: column;
             align-items: flex-end;
             justify-content: start;
             margin-top: 0px;
         }
-
-
-        &-data {
-            display: flex;
-            width: 100%;
-            align-items: center;
-            justify-content: flex-end;
-        }
-
-        &-name {
-            width: fit-content;
-            font-size: 12px;
-            margin-right: 10px;
-            text-align: end;
-
-            @media screen and (min-width: 768px) {
-                font-size: 18px;
-            }
-
-            p {
-                margin: 0;
-                padding: 3px;
-            }
-        }
-
-        &-pic {
-            display: inline-block;
-            height: 32px;
-            width: 32px;
-            border-radius: 50%;
-
-            @media screen and (min-width: 768px) {
-                height: 64px;
-                width: 64px;
-            }
-        }
     }
 }
 
-.collapse {
-    display: flex;
+.collapse__property-section {
     justify-content: space-between;
     gap: 60px;
-    // margin: auto;
 
     @media screen and (min-width: 768px) {
-        // flex-wrap: wrap;
-        margin-bottom: 30px;
-    }
-
-    &__list {
-        margin-top: 4px;
-
-        @media screen and (min-width: 768px) {
-            margin: 0px 62px;
-        }
-
-        &.fiche {
-
-            @media screen and (min-width: 768px) {
-                width: 100%;
-                display: flex;
-                width: 100%;
-            }
-        }
-
-        &-elements {
-            width: 50%;
-        }
+        display: flex;
+        margin: 30px 100px 0;
     }
 }
