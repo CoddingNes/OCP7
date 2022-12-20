@@ -38,7 +38,9 @@ const About = () => {
                         title={theme.title}
                         text={
                             <p className='about collapse__details-text'>{theme.text}</p>
-                        } />
+                        }
+                        className=""
+                    />
                 )}
             </section>
         </main>
