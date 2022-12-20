@@ -65,7 +65,7 @@ const Fiche_logement = () => {
                         key={'description-' + hostDetails.id}
                         title='Description'
                         text={
-                            <p className='component collapse__details-text'>{hostDetails.description}</p>
+                            <p className='property collapse__details-text'>{hostDetails.description}</p>
                         }
                         className=' property' />
                     <Collapse

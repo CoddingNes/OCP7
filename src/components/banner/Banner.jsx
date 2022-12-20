@@ -9,7 +9,7 @@ const Banner = (props) => {
                     src={props.src}
                     alt="paysage d'illustration"
                     className={props.specificClass + 'banner__img'} />
-                <h1 className={props.specificClass + 'banner__title'}>Chez vous,<span></span>partout et ailleurs</h1>
+                {props.specificClass === "" ? <h1 className={props.specificClass + 'banner__title'}>Chez vous,<span></span>partout et ailleurs</h1> : ""}
             </div>
         </section>
     );

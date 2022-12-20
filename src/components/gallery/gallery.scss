@@ -39,12 +39,14 @@
     }
 
     &__counter {
-        display: none;
         position: absolute;
         left: 50%;
         bottom: 0;
         @include fonts500White;
         font-size: 18px;
-    }
 
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
 }
