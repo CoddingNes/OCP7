@@ -9,7 +9,8 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Fiche_logement = () => {
-    const [hosts, setHosts] = useState([]);
+    const [host, setHost] = useState([]);
+    const [display, setDisplay] = useState(false);
     const getData = () => {
         fetch('../logements.json'
             , {
@@ -23,57 +24,60 @@ const Fiche_logement = () => {
                 return response.json();
             })
             .then(function (myJson) {
-                setHosts(myJson);
+                const id = window.location.pathname.split('=')[1];
+                const host = myJson.find(host => host.id === id);
+                if (host) {
+                    setHost(host);
+                    setDisplay(true);
+                } else {
+                    redirection()
+                }
             });
     }
+
     useEffect(() => {
         getData()
     }, [])
 
     const navigate = useNavigate();
-    const id = window.location.pathname.split('=')[1];
-    const hostDetails = hosts.find(host => host.id === id);
     const redirection = () => {
-        if (hostDetails === undefined) {
-            navigate("/404");
-        }
+        navigate("/404");
     };
-    redirection()
 
-    if (hostDetails) {
+    if (display) {
         return (
             <main>
                 <section className='carousel__block'>
-                    <Gallery pictures={hostDetails.pictures} />
+                    <Gallery pictures={host.pictures} />
                 </section>
                 <section className='details'>
                     <div className='details__lodge'>
-                        <Lodge title={hostDetails.title} location={hostDetails.location} />
-                        <div className='details__lodge-tags'>
-                            {hostDetails.tags.map((tags, index) =>
+                        <Lodge title={host.title} location={host.location} />
+                        <div className='details__lodge-tags'>host
+                            {host.tags.map((tags, index) =>
                                 <Tag key={index} tags={tags} />
                             )}
                         </div>
                     </div>
                     <div className='details__owner'>
-                        <Owner name={hostDetails.host.name} picture={hostDetails.host.picture} />
-                        <Rating stars={hostDetails.rating} />
+                        <Owner name={host.host.name} picture={host.host.picture} />
+                        <Rating stars={host.rating} />
                     </div>
                 </section>
                 <section className='collapse__property-section'>
                     <Collapse
-                        key={'description-' + hostDetails.id}
+                        key={'description-' + host.id}
                         title='Description'
                         text={
-                            <p className='property collapse__details-text'>{hostDetails.description}</p>
+                            <p className='property collapse__details-text'>{host.description}</p>
                         }
                         className=' property' />
                     <Collapse
-                        key={'equipments-' + hostDetails.id}
+                        key={'equipments-' + host.id}
                         title='Equipement'
                         text={
                             <ul className='property collapse__details-text'>
-                                {hostDetails.equipments.map((item, index) => (
+                                {host.equipments.map((item, index) => (
                                     <li key={index}>{item}</li>
                                 ))}
                             </ul>
