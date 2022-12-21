@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import arrowDown from './downArrow.svg'
 import arrowUp from './upArrow.svg'
 
 const Collapse = ({ title, text, className }) => {
@@ -20,19 +19,11 @@ const Collapse = ({ title, text, className }) => {
             onClick={open} >
             <div className={hidden ? 'collapse__box' : 'collapse__box translate'} >
                 <p className='collapse__title'>{title}</p>
-                {hidden ?
-                    <img
-                        src={arrowUp}
-                        alt="Flèche déroulante"
-                        className='collapse__image'
-                    /> :
-                    <img
-                        id="img"
-                        src={arrowDown}
-                        alt="Flèche déroulante"
-                        className='collapse__image'
-                    />
-                }
+                <img
+                    src={arrowUp}
+                    alt="Flèche déroulante"
+                    className={hidden ? 'collapse__image rotate' : 'collapse__image'}
+                />
             </div>
             {hidden ? "" :
                 <div className='collapse__details-box'>

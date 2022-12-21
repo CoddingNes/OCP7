@@ -53,7 +53,7 @@ const Fiche_logement = () => {
                 <section className='details'>
                     <div className='details__lodge'>
                         <Lodge title={host.title} location={host.location} />
-                        <div className='details__lodge-tags'>host
+                        <div className='details__lodge-tags'>
                             {host.tags.map((tags, index) =>
                                 <Tag key={index} tags={tags} />
                             )}
