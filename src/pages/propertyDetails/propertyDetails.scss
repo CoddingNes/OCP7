@@ -47,9 +47,10 @@
 .collapse__property-section {
     justify-content: space-between;
     gap: 60px;
+    margin-bottom: 20px;
 
     @media screen and (min-width: 768px) {
         display: flex;
-        margin: 30px 100px 0;
+        margin: 30px 100px 20px;
     }
 }
