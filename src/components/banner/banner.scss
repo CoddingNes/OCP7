@@ -27,19 +27,6 @@
             height: 223px;
             width: 100%;
         }
-
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background-color: black;
-            border-radius: inherit;
-            opacity: 30%;
-            z-index: 0;
-        }
     }
 
     &__img {
@@ -47,6 +34,7 @@
         width: 100%;
         object-fit: cover;
         border-radius: inherit;
+        filter: brightness(0.6);
 
         &.about__style {
             width: 100%;

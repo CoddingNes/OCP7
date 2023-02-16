@@ -2,7 +2,7 @@ import React from 'react';
 import Collapse from '../../components/collapse/Collapse';
 import Banner from '../../components/banner/Banner';
 import aboutDetails from '../../assets/aboutDetails.json'
-import banner from '../../components/banner/aboutBannerDesktop.svg';
+import banner from '../../components/banner/aboutBanner.jpg';
 
 
 

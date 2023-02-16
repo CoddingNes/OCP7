@@ -3,7 +3,7 @@ import { useState } from 'react';
 import arrowUp from './upArrow.svg'
 
 const Collapse = ({ title, text, className }) => {
-    const [hidden, setHidden] = useState(false);
+    const [hidden, setHidden] = useState(true);
     const open = () => {
         if (hidden) {
             setHidden(false);

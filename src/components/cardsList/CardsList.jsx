@@ -1,6 +1,5 @@
 import React from 'react';
 import Cards from '../cards/Cards';
-// import hosts from '../../assets/logements.json';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
@@ -29,13 +28,11 @@ const ArticleLogement = () => {
     return (
         <section className='hostCards'>
             <div className='hostCards__board'>
-                {/* <ul className='hostCards__list'> */}
                 {hosts.map((host) => (
                     <Cards
                         key={host.id}
                         host={host} />
                 ))}
-                {/* </ul> */}
             </div>
         </section>
     );
