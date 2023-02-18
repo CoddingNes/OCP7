@@ -7,26 +7,6 @@ import banner from '../../components/banner/aboutBanner.jpg';
 
 
 const About = () => {
-    // const [isDesktop, setIsDesktop] = useState();
-    // const [resized, setResized] = useState();
-
-
-    // // window.addEventListener("resize", () => {
-    // //     window.matchMedia("(min-width: 768px)").matches ? setIsDesktop(true) : setIsDesktop(false);
-    // // });
-
-    // window.addEventListener("resize", () => {
-    //     setResized(true);
-    //     console.log(resized);
-    // });
-
-
-    // useEffect(() => {
-    //     setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
-    //     console.log("setIsDesktop")
-    //     setResized(false);
-    //     console.log("desktop?" + window.matchMedia("(min-width: 768px)").matches);
-    // }, [resized])
 
     return (
         <main>
