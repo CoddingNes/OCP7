@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import arrowUp from './upArrow.svg'
+import './collapse.scss';
 
 const Collapse = ({ title, text, className }) => {
     const [hidden, setHidden] = useState(true);

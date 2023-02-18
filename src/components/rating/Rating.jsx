@@ -1,6 +1,7 @@
 import React from 'react';
 import redStar from './ratingStar-red.svg';
 import greyStar from './ratingStar-grey.svg';
+import './rating.scss';
 
 const Rating = (stars) => {
     const starCount = [1, 2, 3, 4, 5];

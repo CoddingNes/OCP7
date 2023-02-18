@@ -1,3 +1,6 @@
+@import '../../style/utils/variables.scss';
+@import '../../style/utils/mixins.scss';
+
 .error404 {
     text-align: center;
     @include fonts500Color;

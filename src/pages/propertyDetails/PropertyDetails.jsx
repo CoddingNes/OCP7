@@ -6,6 +6,7 @@ import Rating from '../../components/rating/Rating';
 import Lodge from '../../components/lodge/Lodge';
 import Owner from '../../components/owner/Owner';
 import { useNavigate } from 'react-router-dom';
+import './propertyDetails.scss';
 
 
 const Fiche_logement = () => {
@@ -37,7 +38,7 @@ const Fiche_logement = () => {
 
     useEffect(() => {
         getData()
-    }, [])
+    })
 
     const navigate = useNavigate();
     const redirection = () => {

@@ -1,4 +1,5 @@
 import React from 'react';
+import './banner.scss';
 
 const Banner = (props) => {
 
@@ -9,7 +10,9 @@ const Banner = (props) => {
                     src={props.src}
                     alt="paysage d'illustration"
                     className={props.specificClass + 'banner__img'} />
-                {props.specificClass === "" ? <h1 className={props.specificClass + 'banner__title'}>Chez vous,<span></span>partout et ailleurs</h1> : ""}
+                {/* Conditionnal display of the title */}
+                {props.specificClass === "" ?
+                    <h1 className={props.specificClass + 'banner__title'}>Chez vous,<span></span>partout et ailleurs</h1> : ""}
             </div>
         </section>
     );

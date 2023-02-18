@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './cards.scss';
 
 const Cards = ({ host }) => {
     const routepath = "./fiche_logement/:"

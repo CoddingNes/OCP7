@@ -1,4 +1,5 @@
 import React from 'react';
+import './owner.scss';
 
 const Owner = (props) => {
     return (

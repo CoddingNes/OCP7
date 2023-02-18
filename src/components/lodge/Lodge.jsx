@@ -1,4 +1,5 @@
 import React from 'react';
+import './lodge.scss';
 
 const Lodge = (props) => {
     return (

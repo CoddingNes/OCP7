@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import leftArrow from './leftArrow.svg';
 import rightArrow from './rightArrow.svg';
+import './gallery.scss';
 
 
 const Gallery = (pictures) => {

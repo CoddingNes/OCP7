@@ -1,21 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
-@import "./utils/variables.scss";
-@import "./utils/mixins.scss";
-@import "../pages/home/home.scss";
-@import "../layouts/header/header.scss";
-@import "../components/banner/banner.scss";
-@import "../components/cardsList/cardsList.scss";
-@import "../components/cards/cards.scss";
-@import "../pages/propertyDetails/propertyDetails.scss";
-@import "../components/gallery/gallery.scss";
-@import "../components/owner/owner.scss";
-@import "../components/lodge/lodge.scss";
-@import "../components/rating/rating.scss";
-@import "../layouts/footer/footer.scss";
-@import "../pages/about/about.scss";
-@import "../components/collapse/collapse.scss";
-@import "../pages/error404/error404.scss";
-@import "../components/tag/tag.scss";
 
 * {
     list-style: none;
