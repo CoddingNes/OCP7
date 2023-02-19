@@ -3,7 +3,7 @@ import Cards from '../cards/Cards';
 import './cardsList.scss';
 
 
-const ArticleLogement = () => {
+const CardsList = () => {
     // Create a hosts state
     const [hosts, setHosts] = useState([]);
 
@@ -44,4 +44,4 @@ const ArticleLogement = () => {
     );
 };
 
-export default ArticleLogement;
+export default CardsList;
